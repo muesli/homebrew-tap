@@ -2,12 +2,12 @@
 class Duf < Formula
   desc "Disk Usage/Free Utility"
   homepage "https://fribbledom.com/"
-  version "0.3.0"
+  version "0.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/muesli/duf/releases/download/v0.3.0/duf_0.3.0_Darwin_x86_64.tar.gz"
-    sha256 "5eebdfb4760b1993a1b6f34b079314500e4409014147b059573b1d0c34016bcf"
+    url "https://github.com/muesli/duf/releases/download/v0.3.1/duf_0.3.1_Darwin_x86_64.tar.gz"
+    sha256 "bb5c0d2e556460e8c60f4ea93cabb6bc43df341e53aad685cd372a56004a431d"
   elsif OS.linux?
   end
 
