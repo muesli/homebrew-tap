@@ -9,6 +9,8 @@ class Duf < Formula
     url "https://github.com/muesli/duf/releases/download/v0.3.1/duf_0.3.1_Darwin_x86_64.tar.gz"
     sha256 "bb5c0d2e556460e8c60f4ea93cabb6bc43df341e53aad685cd372a56004a431d"
   elsif OS.linux?
+    url "https://github.com/muesli/duf/releases/download/v0.3.1/duf_0.3.1_linux_x86_64.tar.gz"
+    sha256 "33fd09fef3c2f9b4dbf53044d0c709943b2658f2094a799205553f447e9deed0"
   end
 
   def install
