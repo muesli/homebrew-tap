@@ -2,13 +2,26 @@
 class Mastotool < Formula
   desc "Mastodon CLI tool & statistics generator"
   homepage "https://fribbledom.com/"
-  version "0.2.1"
+  version "0.2.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/muesli/mastotool/releases/download/v0.2.1/mastotool_0.2.1_Darwin_x86_64.tar.gz"
-    sha256 "2fa41c3c72cd6a3fa392609629d89614b47c0895185c9203b497552bd694476d"
+    url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_Darwin_x86_64.tar.gz"
+    sha256 "722fef41de6279612445d83e8a7b32d6b15b60d7739eb1cff58bf52c806df57f"
   elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_linux_x86_64.tar.gz"
+      sha256 "550e90607dbfc71cf35badec1e2b856ab4a8441f9fbdbb72c0d732ef1df7158f"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_linux_arm64.tar.gz"
+        sha256 "1d45aac2d8f47a92badad861e488df4ab7cc24ebed75734e5e1292ab9a36b23e"
+      else
+        url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_linux_armv6.tar.gz"
+        sha256 "a0c8cefc63954d4d5136ff2b0054329000e3dfa41f4cc80fc5a99102bbb1ff69"
+      end
+    end
   end
 
   def install
