@@ -2,24 +2,24 @@
 class Mastotool < Formula
   desc "Mastodon CLI tool & statistics generator"
   homepage "https://fribbledom.com/"
-  version "0.2.2"
+  version "0.2.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_Darwin_x86_64.tar.gz"
-    sha256 "722fef41de6279612445d83e8a7b32d6b15b60d7739eb1cff58bf52c806df57f"
+    url "https://github.com/muesli/mastotool/releases/download/v0.2.3/mastotool_0.2.3_Darwin_x86_64.tar.gz"
+    sha256 "199b0084da41b3d97022054ec9a92b50bd4b89acff4eedc06452e5aea72b81a2"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_linux_x86_64.tar.gz"
-      sha256 "550e90607dbfc71cf35badec1e2b856ab4a8441f9fbdbb72c0d732ef1df7158f"
+      url "https://github.com/muesli/mastotool/releases/download/v0.2.3/mastotool_0.2.3_linux_x86_64.tar.gz"
+      sha256 "e0c5edd3594c2396902587b6b94d496472374d253fbc7e6cf5eb6873aada0154"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_linux_arm64.tar.gz"
-        sha256 "1d45aac2d8f47a92badad861e488df4ab7cc24ebed75734e5e1292ab9a36b23e"
+        url "https://github.com/muesli/mastotool/releases/download/v0.2.3/mastotool_0.2.3_linux_arm64.tar.gz"
+        sha256 "d847f7a14b514f1741aca87d01a18c83171d6dceb50d9d7db0c060a9969ba216"
       else
-        url "https://github.com/muesli/mastotool/releases/download/v0.2.2/mastotool_0.2.2_linux_armv6.tar.gz"
-        sha256 "a0c8cefc63954d4d5136ff2b0054329000e3dfa41f4cc80fc5a99102bbb1ff69"
+        url "https://github.com/muesli/mastotool/releases/download/v0.2.3/mastotool_0.2.3_linux_armv6.tar.gz"
+        sha256 "497676c8f0f74a8930d3db3d9e4e3f70cc6b83a074d4d601e9e0cf7a1478561a"
       end
     end
   end
