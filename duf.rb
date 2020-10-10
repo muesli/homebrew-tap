@@ -2,13 +2,26 @@
 class Duf < Formula
   desc "Disk Usage/Free Utility"
   homepage "https://fribbledom.com/"
-  version "0.3.1"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/muesli/duf/releases/download/v0.3.1/duf_0.3.1_Darwin_x86_64.tar.gz"
-    sha256 "bb5c0d2e556460e8c60f4ea93cabb6bc43df341e53aad685cd372a56004a431d"
+    url "https://github.com/muesli/duf/releases/download/v0.4.0/duf_0.4.0_Darwin_x86_64.tar.gz"
+    sha256 "ee9257997d2c52c99ab19131f0455b703021bb2d5e63cd725f78e134df330e39"
   elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/muesli/duf/releases/download/v0.4.0/duf_0.4.0_linux_x86_64.tar.gz"
+      sha256 "b97e4584de4b6409891f783f16bd3997f12a5a4e53957927ed0c200e3f384740"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/muesli/duf/releases/download/v0.4.0/duf_0.4.0_linux_arm64.tar.gz"
+        sha256 "b6e6fcd7da81798309f8c3ae72111f2b1df2c2362262c0b1e4c692bf674d8714"
+      else
+        url "https://github.com/muesli/duf/releases/download/v0.4.0/duf_0.4.0_linux_armv6.tar.gz"
+        sha256 "7669d75f9ba0ff23630814540e3e033594b2db447dca9842af99e562544a5685"
+      end
+    end
   end
 
   def install
