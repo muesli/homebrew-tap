@@ -4,6 +4,7 @@ class Deckmaster < Formula
   homepage "https://fribbledom.com/"
   version "0.1.0"
   bottle :unneeded
+  depends_on :linux
 
   if OS.mac?
   elsif OS.linux?
