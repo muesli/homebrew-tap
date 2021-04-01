@@ -5,24 +5,28 @@
 class Duf < Formula
   desc "Disk Usage/Free Utility"
   homepage "https://fribbledom.com/"
-  version "0.6.0"
+  version "0.6.1"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/muesli/duf/releases/download/v0.6.0/duf_0.6.0_Darwin_x86_64.tar.gz"
-    sha256 "0a84151327f5fdbebc90dc309708a0cd7da368394e358db37f6dc4a250725bac"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_Darwin_x86_64.tar.gz"
+    sha256 "a417ae9d3756af572964ff94a3ecb8e4bbd5ef50a75f4d092c0191c792980f91"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_Darwin_arm64.tar.gz"
+    sha256 "21765dfc815a24a9b88991089b919b577096fb4cce95cb8d6625c66ea90bfdb7"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/muesli/duf/releases/download/v0.6.0/duf_0.6.0_linux_x86_64.tar.gz"
-    sha256 "2cf2e6263dcdd4809c1a9ca2ee50ce0c228c5720a1d3ddd1cae084f8fbfe1ae1"
+    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_linux_x86_64.tar.gz"
+    sha256 "d2c48e5dc5c77c530677a3e43376539c7bc525c4dbbdf8db7a9adeba9c45137d"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/muesli/duf/releases/download/v0.6.0/duf_0.6.0_linux_armv6.tar.gz"
-    sha256 "9805268265019cadad313106e62d1b55e585d88cbb6c00ab7173684db09fbf24"
+    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_linux_armv6.tar.gz"
+    sha256 "f5bb387f47c9fbdfc720b3e9ccfb19afb581193bb22877b470ebc3e557ac83ca"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/muesli/duf/releases/download/v0.6.0/duf_0.6.0_linux_arm64.tar.gz"
-    sha256 "de978266fc8c272bec7f3b0de5e85e652c92268009ecbd829ac444edc96d3890"
+    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_linux_arm64.tar.gz"
+    sha256 "f1d34a2b9fb7c1db3f1e32b983cdf55f52a2d5440214330b0c36b1b1bbfc4a15"
   end
 
   def install
