@@ -5,28 +5,28 @@
 class Duf < Formula
   desc "Disk Usage/Free Utility"
   homepage "https://fribbledom.com/"
-  version "0.6.1"
+  version "0.6.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_Darwin_x86_64.tar.gz"
-    sha256 "a417ae9d3756af572964ff94a3ecb8e4bbd5ef50a75f4d092c0191c792980f91"
+    url "https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_Darwin_x86_64.tar.gz"
+    sha256 "e612a2fb0d79969b20311c4ee5603cba46f4ea7dcdb63d9dd8beaa4448bb10b7"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_Darwin_arm64.tar.gz"
-    sha256 "21765dfc815a24a9b88991089b919b577096fb4cce95cb8d6625c66ea90bfdb7"
+    url "https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_Darwin_arm64.tar.gz"
+    sha256 "2eca6fca65886c3dc7254fbd3ba9ad6dab9d81b720346a098c7de6601981678e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_linux_x86_64.tar.gz"
-    sha256 "d2c48e5dc5c77c530677a3e43376539c7bc525c4dbbdf8db7a9adeba9c45137d"
+    url "https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_x86_64.tar.gz"
+    sha256 "3f2a4d4daed58d8e7dbc281b24187f606479d8f0bb851bedd2c2d910f959b661"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_linux_armv6.tar.gz"
-    sha256 "f5bb387f47c9fbdfc720b3e9ccfb19afb581193bb22877b470ebc3e557ac83ca"
+    url "https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_armv6.tar.gz"
+    sha256 "074f5dc4ece834f01f95b4ba80369a6c32178bf56a8b37ba48bea598244c3967"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/muesli/duf/releases/download/v0.6.1/duf_0.6.1_linux_arm64.tar.gz"
-    sha256 "f1d34a2b9fb7c1db3f1e32b983cdf55f52a2d5440214330b0c36b1b1bbfc4a15"
+    url "https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_arm64.tar.gz"
+    sha256 "34842c3d94926acd8651cb9b1e85fa7ae76942947506d341bb9860f3461f11e5"
   end
 
   def install
