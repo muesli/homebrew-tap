@@ -5,37 +5,33 @@
 class Markscribe < Formula
   desc "Your personal markdown scribe with template-engine and Git(Hub) & RSS powers"
   homepage "https://fribbledom.com/"
-  version "0.4.0"
+  version "0.5.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/markscribe/releases/download/v0.4.0/markscribe_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "5adafea97df5b787d4be357a87a736027158ffe512e4eb07505da8c6ca381fa4"
+      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "9dc5e34cf68c591b6d6a3992132663826abc241eda82506217a14f0549ef5229"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/muesli/markscribe/releases/download/v0.4.0/markscribe_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "1908d358a74ba10ec4d764f487a0fbce8a3fafabd1aff2ca48b716a2f7eb7f11"
+      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "25a5b15da6c1f40de3a5f2b81c3a71386ebd6a1c103bb9053cd7657571a8c408"
     end
-
-    depends_on arch: [:x86_64, :aarch64]
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/markscribe/releases/download/v0.4.0/markscribe_0.4.0_linux_x86_64.tar.gz"
-      sha256 "e0198b56a21273f8c195f9fcb346b5bd80b92c9028c95e7a13b02095729acbe4"
+      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_linux_x86_64.tar.gz"
+      sha256 "c8d6e6d721a9dba9c75bef1947aa4107590bd52bf514f4d90ed5d33308d90cea"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/markscribe/releases/download/v0.4.0/markscribe_0.4.0_linux_armv6.tar.gz"
-      sha256 "bcca1bf60173e0277fb0b7a316266070d92f4d50cf928636f05daaad1e3b5202"
+      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_linux_armv6.tar.gz"
+      sha256 "2ac38e4c6ea2e146963230cd3d6dd67a174a44ea41eec7b55d52c72640644216"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/markscribe/releases/download/v0.4.0/markscribe_0.4.0_linux_arm64.tar.gz"
-      sha256 "0958834f5432f5c5057f7fdd9606ab4aefa9eed9285ac3dc3fbbc2f613852dc7"
+      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_linux_arm64.tar.gz"
+      sha256 "fe3677f32d1b03ab57133f85286801be897db2355dff5b99bc1d80af150ea419"
     end
-
-    depends_on arch: [:x86_64, :aarch64, :arm]
   end
 
   def install
