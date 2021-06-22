@@ -5,32 +5,32 @@
 class Markscribe < Formula
   desc "Your personal markdown scribe with template-engine and Git(Hub) & RSS powers"
   homepage "https://fribbledom.com/"
-  version "0.5.0"
+  version "0.6.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_Darwin_x86_64.tar.gz"
-      sha256 "9dc5e34cf68c591b6d6a3992132663826abc241eda82506217a14f0549ef5229"
+      url "https://github.com/muesli/markscribe/releases/download/v0.6.0/markscribe_0.6.0_Darwin_x86_64.tar.gz"
+      sha256 "470dd002bc04dc93dc88d167a5f9d9200c42a1b8fee40b89e5e2b0967f2487c9"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_Darwin_arm64.tar.gz"
-      sha256 "25a5b15da6c1f40de3a5f2b81c3a71386ebd6a1c103bb9053cd7657571a8c408"
+      url "https://github.com/muesli/markscribe/releases/download/v0.6.0/markscribe_0.6.0_Darwin_arm64.tar.gz"
+      sha256 "d13e656a67b879007b4019a4b5d0f406cb989ba4ce1d82797f7a3fc851a10488"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_linux_x86_64.tar.gz"
-      sha256 "c8d6e6d721a9dba9c75bef1947aa4107590bd52bf514f4d90ed5d33308d90cea"
+      url "https://github.com/muesli/markscribe/releases/download/v0.6.0/markscribe_0.6.0_linux_x86_64.tar.gz"
+      sha256 "695ebc6ab3a64dc34c9de5cfed2676154c726ce0fb53cb3e6b758e4333015677"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_linux_armv6.tar.gz"
-      sha256 "2ac38e4c6ea2e146963230cd3d6dd67a174a44ea41eec7b55d52c72640644216"
+      url "https://github.com/muesli/markscribe/releases/download/v0.6.0/markscribe_0.6.0_linux_armv6.tar.gz"
+      sha256 "ef285359cd7be354425846f6d50d43c04afe66db80643ecf9e4048f7b3629458"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/markscribe/releases/download/v0.5.0/markscribe_0.5.0_linux_arm64.tar.gz"
-      sha256 "fe3677f32d1b03ab57133f85286801be897db2355dff5b99bc1d80af150ea419"
+      url "https://github.com/muesli/markscribe/releases/download/v0.6.0/markscribe_0.6.0_linux_arm64.tar.gz"
+      sha256 "e330e3fec1580c3c9a6aa792dc68f363b6da20499be276f469477cd580a564a4"
     end
   end
 
