@@ -5,32 +5,32 @@
 class Gitty < Formula
   desc "Smart little CLI helper for git projects"
   homepage "https://fribbledom.com/"
-  version "0.1.1"
+  version "0.2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/gitty/releases/download/v0.1.1/gitty_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "6204212d9c55743dad15e5c37adaf4966517e167efa7ee22366e8c7fe4a970de"
+      url "https://github.com/muesli/gitty/releases/download/v0.2.0/gitty_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "47d25e636c0ea050478fac6e968cdcc3241b38ca5ad670ca11c1f51b244c9cda"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/muesli/gitty/releases/download/v0.1.1/gitty_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "0e127990989584696fe903ec1a25f25c7a53c87443608ed95ef7ab55c45b42ff"
+      url "https://github.com/muesli/gitty/releases/download/v0.2.0/gitty_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "7b3d2c21110190e9575935ea00badfed7f8063331eaeb1bb653d7fb213d120bc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/gitty/releases/download/v0.1.1/gitty_0.1.1_linux_x86_64.tar.gz"
-      sha256 "c8351101aa9b90bb9d88bea210108530ce0a357afde5097bcaa5c23cda44d6ac"
+      url "https://github.com/muesli/gitty/releases/download/v0.2.0/gitty_0.2.0_linux_x86_64.tar.gz"
+      sha256 "2557f6bbeb86430e3017d8bb589bec4dac25b1997af14422a6d5ea6db2b49db6"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/gitty/releases/download/v0.1.1/gitty_0.1.1_linux_armv6.tar.gz"
-      sha256 "8d5514c116131df822ae52374bb34c2f935ad0e70913eb9f651e5d45721d75d9"
+      url "https://github.com/muesli/gitty/releases/download/v0.2.0/gitty_0.2.0_linux_armv6.tar.gz"
+      sha256 "d8e63d28e9a8e86b897a21dd0695c95e9417c85d78ce928a1418ba1afd4c83e6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/gitty/releases/download/v0.1.1/gitty_0.1.1_linux_arm64.tar.gz"
-      sha256 "5c592fb5715d6523844b9f3a0f8638d6f688d8fa6b241eb64f5b9186d58147a5"
+      url "https://github.com/muesli/gitty/releases/download/v0.2.0/gitty_0.2.0_linux_arm64.tar.gz"
+      sha256 "80ddaf1e1e86b7113bf03fc86be03cbf7d17930263ca60bd489a9bc18a07b8dc"
     end
   end
 
