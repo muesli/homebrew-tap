@@ -3,7 +3,6 @@ class Prism < Formula
   desc "Disk Usage/Free Utility"
   homepage "https://fribbledom.com/"
   version "0.1.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/muesli/prism/releases/download/v0.1.1/prism_0.1.1_Darwin_x86_64.tar.gz"

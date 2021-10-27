@@ -6,7 +6,6 @@ class ObsCli < Formula
   desc "OBS-cli is a command-line remote control for OBS"
   homepage "https://fribbledom.com/"
   version "0.2.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

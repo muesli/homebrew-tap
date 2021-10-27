@@ -3,7 +3,6 @@ class Mastotool < Formula
   desc "Mastodon CLI tool & statistics generator"
   homepage "https://fribbledom.com/"
   version "0.2.4"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/muesli/mastotool/releases/download/v0.2.4/mastotool_0.2.4_Darwin_x86_64.tar.gz"
