@@ -6,7 +6,6 @@ class Gitty < Formula
   desc "Smart little CLI helper for git projects"
   homepage "https://fribbledom.com/"
   version "0.3.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

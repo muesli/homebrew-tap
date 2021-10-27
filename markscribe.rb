@@ -6,7 +6,6 @@ class Markscribe < Formula
   desc "Your personal markdown scribe with template-engine and Git(Hub) & RSS powers"
   homepage "https://fribbledom.com/"
   version "0.6.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

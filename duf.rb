@@ -6,7 +6,6 @@ class Duf < Formula
   desc "Disk Usage/Free Utility"
   homepage "https://fribbledom.com/"
   version "0.6.2"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_Darwin_x86_64.tar.gz"
