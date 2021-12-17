@@ -5,20 +5,20 @@
 class ObsCli < Formula
   desc "OBS-cli is a command-line remote control for OBS"
   homepage "https://fribbledom.com/"
-  version "0.3.1"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/muesli/obs-cli/releases/download/v0.3.1/obs-cli_0.3.1_Darwin_arm64.tar.gz"
-      sha256 "18447459fb0bcd2af09d80b7d2222390714daa423dbb50af4f9b58271e567d6c"
+      url "https://github.com/muesli/obs-cli/releases/download/v0.4.0/obs-cli_0.4.0_Darwin_arm64.tar.gz"
+      sha256 "7b517a954e470fbd0f49f160fab446bab670d49b38e2b50f4fdc69799c0152aa"
 
       def install
         bin.install "obs-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/obs-cli/releases/download/v0.3.1/obs-cli_0.3.1_Darwin_x86_64.tar.gz"
-      sha256 "1fee678d6d84552864d50b30a241a46f76c3ee25c8b319ac8a3c5489e4859233"
+      url "https://github.com/muesli/obs-cli/releases/download/v0.4.0/obs-cli_0.4.0_Darwin_x86_64.tar.gz"
+      sha256 "adf35a40480208df94cd1b37e8f7b15e06dfd58a71f1ba103a5534d41b08ba27"
 
       def install
         bin.install "obs-cli"
@@ -28,24 +28,24 @@ class ObsCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/obs-cli/releases/download/v0.3.1/obs-cli_0.3.1_linux_armv6.tar.gz"
-      sha256 "9395a80c761b7603df9aa9db2d07040cdcf2a30c0e4baada9193dc360924070c"
+      url "https://github.com/muesli/obs-cli/releases/download/v0.4.0/obs-cli_0.4.0_linux_armv6.tar.gz"
+      sha256 "ba2387880dc00052522ac837b00eb07c42b0c3f96ffc07f89fc615c1e9903a10"
 
       def install
         bin.install "obs-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/obs-cli/releases/download/v0.3.1/obs-cli_0.3.1_linux_arm64.tar.gz"
-      sha256 "3abf3c06f8a15072759cec76560f421b7f61b6d5a8cc349304563557e4c11efe"
+      url "https://github.com/muesli/obs-cli/releases/download/v0.4.0/obs-cli_0.4.0_linux_arm64.tar.gz"
+      sha256 "f3de696d851bfe29a8405404c6a8ddc64bccb8e415f9ded0269dc7e3a88006bb"
 
       def install
         bin.install "obs-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/obs-cli/releases/download/v0.3.1/obs-cli_0.3.1_linux_x86_64.tar.gz"
-      sha256 "33ff773a75a0ab9c992ea5aca797e15636eb2805f15466c5dff0c9a3e909305e"
+      url "https://github.com/muesli/obs-cli/releases/download/v0.4.0/obs-cli_0.4.0_linux_x86_64.tar.gz"
+      sha256 "c09bf6c304cab1b40913673a78aa4e008bf7a68014b01a2013a599665d07ce6a"
 
       def install
         bin.install "obs-cli"
