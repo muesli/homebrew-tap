@@ -5,20 +5,20 @@
 class Gitty < Formula
   desc "Smart little CLI helper for git projects"
   homepage "https://fribbledom.com/"
-  version "0.4.1"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/muesli/gitty/releases/download/v0.4.1/gitty_0.4.1_Darwin_arm64.tar.gz"
-      sha256 "73aef786f0a829999b7c25272a149bff20a774f5fe2be9ed53ec3759ee14bc3b"
+      url "https://github.com/muesli/gitty/releases/download/v0.5.0/gitty_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "57d93bebfd3859d695d5b67950c57262a7c479963e846be602178cf86c3b6f2a"
 
       def install
         bin.install "gitty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/gitty/releases/download/v0.4.1/gitty_0.4.1_Darwin_x86_64.tar.gz"
-      sha256 "d4609645dec6797d0b79c27d1edb6aaa1a58dbed80f97f6d3bd54f9d8bc74a3e"
+      url "https://github.com/muesli/gitty/releases/download/v0.5.0/gitty_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "8fa3623a5bd95e10254a0efe431f3a8cfe38c9a9b7ae57aae49c1de699e64aee"
 
       def install
         bin.install "gitty"
@@ -28,24 +28,24 @@ class Gitty < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/gitty/releases/download/v0.4.1/gitty_0.4.1_linux_armv6.tar.gz"
-      sha256 "912815a37012c8d2058f128d9d198746efe3ce5cade79a4fae60d768014f1568"
+      url "https://github.com/muesli/gitty/releases/download/v0.5.0/gitty_0.5.0_linux_armv6.tar.gz"
+      sha256 "356f63f10007e05f02d19734899ce01693b720af56424866337305b9f2b96b04"
 
       def install
         bin.install "gitty"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/gitty/releases/download/v0.4.1/gitty_0.4.1_linux_arm64.tar.gz"
-      sha256 "909b39623fce26139934c8379fe8328675e7e447e0f5ffff9c44cfe5821d1741"
+      url "https://github.com/muesli/gitty/releases/download/v0.5.0/gitty_0.5.0_linux_arm64.tar.gz"
+      sha256 "9bc0b08f291766ea5bb25daff5b1849eb6b8fc40c87e0ed68cd97e1b36caf8bd"
 
       def install
         bin.install "gitty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/gitty/releases/download/v0.4.1/gitty_0.4.1_linux_x86_64.tar.gz"
-      sha256 "e513aeff38b6090a888b6717afb48355f13d83b2073ab0676adb122a4ca6b370"
+      url "https://github.com/muesli/gitty/releases/download/v0.5.0/gitty_0.5.0_linux_x86_64.tar.gz"
+      sha256 "315d1b41015d9568ee029d1761c6ae23a851dd75abde749942639d54818e071e"
 
       def install
         bin.install "gitty"
