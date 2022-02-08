@@ -5,20 +5,20 @@
 class Duf < Formula
   desc "Disk Usage/Free Utility"
   homepage "https://fribbledom.com/"
-  version "0.8.0"
+  version "0.8.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/muesli/duf/releases/download/v0.8.0/duf_0.8.0_Darwin_x86_64.tar.gz"
-      sha256 "8cae8423800d4180fe6afc112d16955512f854bc1997636064bc5b534a220639"
+    if Hardware::CPU.arm?
+      url "https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_Darwin_arm64.tar.gz"
+      sha256 "5f9b43bca3d208c59ad2a93ffb60bc2180ba5221c9b51732ce492dfd1e964292"
 
       def install
         bin.install "duf"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/muesli/duf/releases/download/v0.8.0/duf_0.8.0_Darwin_arm64.tar.gz"
-      sha256 "dcd7bcd759ddfb06619d963a7c459e149e294b5c5314a474953a3ababcb71adf"
+    if Hardware::CPU.intel?
+      url "https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_Darwin_x86_64.tar.gz"
+      sha256 "dadf1e593fa47ff05fc334c42e673ee222bbe82f5406d54c40b3658addb92940"
 
       def install
         bin.install "duf"
@@ -28,24 +28,24 @@ class Duf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/duf/releases/download/v0.8.0/duf_0.8.0_linux_armv6.tar.gz"
-      sha256 "92f1a539921d483b25e0ab3c0367343b60b8a7676046bfebaa918340a2bfa663"
+      url "https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_armv6.tar.gz"
+      sha256 "e93873286a7b5e4f3df28411b82b582fa4b7daf704c5e9946f24bcede0dc91f9"
 
       def install
         bin.install "duf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muesli/duf/releases/download/v0.8.0/duf_0.8.0_linux_arm64.tar.gz"
-      sha256 "bba11ac877b919b5b71beff312543dd2de85837689341102ebbd95793899fceb"
+      url "https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_arm64.tar.gz"
+      sha256 "66d304427bb30e5766e66e740394b0b07bd852b64cc5cda755eab33adf853e72"
 
       def install
         bin.install "duf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muesli/duf/releases/download/v0.8.0/duf_0.8.0_linux_x86_64.tar.gz"
-      sha256 "03e9a26901b669d96dcd21057ef746e7d5a9284c51166c79df5caaea6295aabe"
+      url "https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_x86_64.tar.gz"
+      sha256 "a8343eed730df04acfc0ba1553b99b4ef91d5122cab58ee241ea8196948408d7"
 
       def install
         bin.install "duf"
